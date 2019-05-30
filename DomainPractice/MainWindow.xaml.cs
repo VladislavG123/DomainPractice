@@ -35,14 +35,19 @@ namespace DomainPractice
 
         private void DownloadButtonClick(object sender, RoutedEventArgs e)
         {
+            progressBar.IsIndeterminate = true;
+            WebClient webClient = new WebClient();
             
+            string link = @"ftp://speedtest:speedtest@ftp.otenet.gr/test100Mb.db";
+            string downloadFileName = System.IO.Path.GetFileName("1.db");
+            webClient.DownloadFileAsync(new Uri(link), @"C:\Users\гороховв.CORP\Desktop\" + downloadFileName);
+            progressBar.IsIndeterminate = false;
         }
 
-        
-
+    
         private async void CountButtonClick(object sender, RoutedEventArgs e)
         {
-            progressBar.Value = 20;
+            progressBar.Value = 10;
 
             string json = "";
 
@@ -57,6 +62,7 @@ namespace DomainPractice
                     json += line;
                 }
             }
+            progressBar.Value = 40;
 
             EarthquakeService earthquakeService = JsonConvert.DeserializeObject<EarthquakeService>(json);
 
