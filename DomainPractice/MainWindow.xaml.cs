@@ -30,6 +30,10 @@ namespace DomainPractice
         {
             progressBar.IsIndeterminate = true;
 
+            var downloadAppDomain = AppDomain.CreateDomain("DownloadApp");
+            var downloadAppPath = AppDomain.CurrentDomain.BaseDirectory + @"Download\DownloadingFilesApp.exe";
+            downloadAppDomain.ExecuteAssembly(downloadAppPath);
+            AppDomain.Unload(downloadAppDomain);
 
             progressBar.IsIndeterminate = false;
         }
@@ -38,6 +42,10 @@ namespace DomainPractice
         {
             progressBar.IsIndeterminate = true;
 
+            var countAppDomain = AppDomain.CreateDomain("HardCountApp");
+            var countAppPath = AppDomain.CurrentDomain.BaseDirectory + @"Count\HardCountApp.exe";
+            countAppDomain.ExecuteAssembly(countAppPath);
+            AppDomain.Unload(countAppDomain);
 
             progressBar.IsIndeterminate = false;
         }
