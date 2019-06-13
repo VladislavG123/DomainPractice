@@ -27,7 +27,7 @@
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
         <Button x:Name="downloadButton" Content="СКАЧАТЬ &#xD;&#xA;БОЛЬШОЙ&#xA;ФАЙЛ"  FontSize="20" HorizontalContentAlignment="Center" Grid.Row="1" Grid.Column="1" Height="auto" FontFamily="Century Gothic" Click="DownloadButtonClick"></Button>
-        <Button x:Name="countButton" Content="ВЫЧИСЛЕНИЕ&#xA;ФАКТОРИАЛА &#xA;ЧИСЛА ОТ &#xA;КОЛИЧЕСТВА &#xA;ЗЕМЛЕТРЕСЕНИЙ &#xA;С МАГНИТУДОЙ &#xD;&#xA;БОЛЕЕ &#xD;&#xA;ОДНОГО &#xD;&#xA;БАЛЛА" FontSize="16" HorizontalContentAlignment="Center" Grid.Row="2" Grid.Column="1" FontFamily="Century Gothic" Height="auto" Click="CountButtonClick"></Button>
+        <Button x:Name="countButton" Content="ВЫЧИСЛЕНИЕ&#xA;КОЛИЧЕСТВА &#xA;ЗЕМЛЕТРЕСЕНИЙ &#xA;С МАГНИТУДОЙ &#xD;&#xA;БОЛЕЕ &#xD;&#xA;ОДНОГО &#xD;&#xA;БАЛЛА" FontSize="16" HorizontalContentAlignment="Center" Grid.Row="2" Grid.Column="1" FontFamily="Century Gothic" Height="auto" Click="CountButtonClick"></Button>
         <ProgressBar x:Name="progressBar" Grid.Row="3" Grid.ColumnSpan="3" Height="20" VerticalAlignment="Bottom" IsIndeterminate="True"></ProgressBar>  
     </Grid>
 </Window>
